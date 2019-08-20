@@ -1,0 +1,22 @@
+name: Reequip
+main: com.litts.reequip.ReequipPlugin
+version: 1.0
+api-version: 1.13
+
+commands:
+  reequip:
+    description: Toggles the reequip function on or off
+    permission: reequip
+    usage: /reequip
+permissions:
+  reequip.*:
+    description: Parent for all Reequip permissions
+    children:
+      reequip.toggle: true
+      reequip.use: true
+    reequip.use:
+      description: Required for using the reequip function
+      default: true
+    reequip.toggle:
+      description: Requipred for using the /reequip command
+      default: true
